@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            /* background: #333; */
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+
+        .cards-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .card-description {
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .card-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .card-button:hover {
+            background: #45a049;
+        }
+
+        .admin-card .card-icon {
+            color: #2196F3;
+        }
+
+        .user-card .card-icon {
+            color: #4CAF50;
+        }
+
+        .footer {
+            /* background: #333; */
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+
+   
+    
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+        position: relative;
+        overflow-x: hidden;
+        background: linear-gradient(45deg, #0d1117, #161b22);
+    }
+
+    .animated-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    .moving-squares {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .square {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.05);
+        animation: moveSquare 15s infinite linear;
+        transform: rotate(45deg);
+    }
+
+    @keyframes moveSquare {
+        0% {
+            transform: translateY(100vh) rotate(45deg);
+            opacity: 0;
+        }
+        20% {
+            opacity: 0.5;
+        }
+        80% {
+            opacity: 0.5;
+        }
+        100% {
+            transform: translateY(-100px) rotate(45deg);
+            opacity: 0;
+        }
+    }
+
+    /* Update container style for better contrast */
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .card {
+        background: rgba(192, 240, 254, 0.95);
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .header {
+        /* background: rgba(51, 51, 51, 0.95); */
+        backdrop-filter: blur(10px);
+    }
+
+    .footer {
+         /* background: rgba(51, 51, 51, 0.95); */
+        backdrop-filter: blur(10px);
+    }
+
+    </style>
+</head>
+<body>
+    <div class="animated-background">
+        <div class="moving-squares"></div>
+    </div>
+    <div class="header">
+        <h1>Movie Review System</h1>
+    </div>
+
+    <div class="container">
+        <div class="cards-container">
+            <div class="card admin-card">
+                <div class="card-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <h2 class="card-title">Admin Portal</h2>
+                <p class="card-description">
+                    Manage movies, review user submissions, and maintain the platform. 
+                    Access administrative tools and controls.
+                </p>
+                <a href="frontend/admin/pages/index.html" class="card-button">Login as Admin</a>
+            </div>
+
+            <div class="card user-card">
+                <div class="card-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h2 class="card-title">User Portal</h2>
+                <p class="card-description">
+                    Browse movies, write reviews, and interact with other users. 
+                    Share your thoughts on your favorite films.
+                </p>
+                <a href="frontend/user/pages/index.html" class="card-button">Login as User</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <!-- <p>&copy; 2024 Movie Review System. All rights reserved.</p> -->
+        <p>by dorKnight</p> 
+    </div>
+    <script>
+        function createSquares() {
+            const background = document.querySelector('.moving-squares');
+            const squareCount = 15;
+    
+            for (let i = 0; i < squareCount; i++) {
+                const square = document.createElement('div');
+                square.className = 'square';
+                
+                // Random size between 20px and 60px
+                const size = Math.random() * 40 + 20;
+                square.style.width = `${size}px`;
+                square.style.height = `${size}px`;
+                
+                // Random starting position
+                const startPos = Math.random() * 100;
+                square.style.left = `${startPos}%`;
+                
+                // Random animation duration between 10s and 20s
+                const duration = Math.random() * 10 + 10;
+                square.style.animationDuration = `${duration}s`;
+                
+                // Random delay
+                const delay = Math.random() * 10;
+                square.style.animationDelay = `-${delay}s`;
+                
+                background.appendChild(square);
+            }
+        }
+    
+        // Run after DOM loads
+        document.addEventListener('DOMContentLoaded', createSquares);
+    </script>
+</body>
+</html>

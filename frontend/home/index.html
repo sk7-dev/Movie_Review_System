@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review System</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="animated-background">
+        <div class="moving-squares"></div>
+    </div>
+
+    <div class="header">
+        <h1>Movie Review System</h1>
+    </div>
+
+    <div class="container">
+        <div class="cards-container">
+            <div class="card admin-card">
+                <div class="card-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <h2 class="card-title">Admin Portal</h2>
+                <p class="card-description">
+                    Manage movies, review user submissions, and maintain the platform. 
+                    Access administrative tools and controls.
+                </p>
+                <a href="/frontend/admin/index.html" class="card-button">Login as Admin</a>
+            </div>
+
+            <div class="card user-card">
+                <div class="card-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h2 class="card-title">User Portal</h2>
+                <p class="card-description">
+                    Browse movies, write reviews, and interact with other users. 
+                    Share your thoughts on your favorite films.
+                </p>
+                <a href="frontend/user/pages/index.html" class="card-button">Login as User</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Movie Review System. All rights reserved.</p>
+    </div>
+
+    <script src="js/background.js"></script>
+</body>
+</html>

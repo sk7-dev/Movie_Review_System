@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Movie Review System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="dashboard-header">
+        <div class="container">
+            <div class="dashboard-nav">
+                <h1>Movie Management</h1>
+                <div class="nav-buttons">
+                    <a href="/movie_review/index.html" class="home-btn">Return to Home</a>
+                    <a href="add-movie.html" class="add-movie-btn">Add New Movie</a>
+                    <a href="#" onclick="logout()" class="logout-btn">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container">
+        <div id="message" class="message"></div>
+        <div class="movie-grid" id="movieGrid">
+            <!-- Movies will be loaded here -->
+        </div>
+    </div>
+    
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

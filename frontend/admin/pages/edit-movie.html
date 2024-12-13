@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Movie - Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="dashboard-header">
+        <div class="container">
+            <div class="dashboard-nav">
+                <h1>Edit Movie</h1>
+                <a href="dashboard.html" class="back-btn">Back to Dashboard</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <form id="editMovieForm" class="movie-form">
+            <input type="hidden" id="movieId" name="id">
+            <div class="form-group">
+                <label for="title">Movie Title*</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="release_date">Release Date*</label>
+                <input type="date" id="release_date" name="release_date" required>
+            </div>
+            <div class="form-group">
+                <label for="genre">Genre*</label>
+                <input type="text" id="genre" name="genre" required>
+            </div>
+            <div class="form-group">
+                <label for="director">Director</label>
+                <input type="text" id="director" name="director">
+            </div>
+            <div class="form-group">
+                <label for="cast">Cast</label>
+                <input type="text" id="cast" name="cast">
+            </div>
+            <div class="form-group">
+                <label for="duration">Duration (minutes)</label>
+                <input type="number" id="duration" name="duration">
+            </div>
+            <div class="form-group">
+                <label for="poster">Movie Poster</label>
+                <input type="file" id="poster" name="poster" accept="image/*">
+            </div>
+            <div id="currentPoster"></div>
+            <button type="submit" class="submit-btn">Update Movie</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="../js/edit-movie.js"></script>
+</body>
+</html>
